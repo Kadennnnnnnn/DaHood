@@ -132,7 +132,7 @@ for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
 		end
     end)
 
-MainSection:NewButton("GodBullet", "Removes bullet damage (dont use if your banned)", function(v)
+MainSection:NewButton("God", "Removes damage (dont use if your banned)", function(v)
 wait(0) local A_1 = "[Azure] GodBullet Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 local ps = game:GetService("Players")
 	local lp = ps.LocalPlayer
