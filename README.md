@@ -271,6 +271,33 @@ TeleportService = game:GetService("TeleportService")
 		TeleportService:Teleport(placeID_1, plr)
     end)
 
+local Player = Window:NewTab("Teleports")
+    local TeleportsSection = Player:NewSection("Teleports")
+
+TeleportsSection:NewButton("All guns", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-871.855896, -32.7306442, -535.05896, -0.995392859, -4.0865018e-08, 0.0958791748, -4.15632648e-08, 1, -5.28550803e-09, -0.0958791748, -9.24621002e-09, -0.995392859)
+    end)
+
+TeleportsSection:NewButton("Gun shop 1", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.286072, 7.99984741, -737.080627, -0.062280681, 0, 0.998058677, 0, 1, 0, -0.998058677, 0, -0.062280681)
+    end)
+
+TeleportsSection:NewButton("Gun shop 2", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.144287, 48.0050011, -606.490051, 0.997044683, 4.43454518e-08, -0.0768238455, -4.82029563e-08, 1, -4.83580465e-08, 0.0768238455, 5.1918267e-08, 0.997044683)
+    end)
+
+TeleportsSection:NewButton("Bank", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-407.866272, 21.75, -281.132416, 0.0552855767, 5.23181782e-08, 0.998470604, 6.93292961e-08, 1, -5.62370985e-08, -0.998470604, 7.23323623e-08, 0.0552855767)
+    end)
+
+TeleportsSection:NewButton("Casino", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-827.856201, 21.2549973, -180.739929, -0.998989165, 1.3394204e-08, -0.0449521728, 1.2559739e-08, 1, 1.88458227e-08, 0.0449521728, 1.82621847e-08, -0.998989165)
+    end)
+
+TeleportsSection:NewButton("Admin base", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-797.8078, -39.6492004, -899.534851, -0.999981701, -4.12056389e-09, 0.00603817962, -4.31152092e-09, 1, -3.16118118e-08, -0.00603817962, -3.1637267e-08, -0.999981701)
+    end)
+
 
     -- Credits
     local Player = Window:NewTab("Credits")
