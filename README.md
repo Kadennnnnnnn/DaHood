@@ -121,7 +121,7 @@ wait(0) local A_1 = "[Azure] Fly enabled." local A_2 = "All" local Event = game:
     end)
 
 MainSection:NewButton("Reach", "Allows you to damage players from far away", function(v)
-wait(0) local A_1 = "[Azure] Reach enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Azure] Reach Eabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
 	    	if v:isA("Tool") then
 	           local a = Instance.new("SelectionBox",v.Handle)
