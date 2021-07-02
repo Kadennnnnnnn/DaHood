@@ -200,11 +200,24 @@ Player = game:GetService'Players'.LocalPlayer;
 		end)
     end)
 
+MainSection:NewButton("Anti Bag", "Disables the ability to get bagged", function(v)
+wait(0) local A_1 = "[Azure] AntiBag Dnabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+	local LocalPlayer = game:GetService("Players").LocalPlayer
+	local char = LocalPlayer.Character
+	char.ChildAdded:Connect(function(sock)
+		if sock:IsA("MeshPart") then do
+				wait(0)
+				sock:Destroy()
+			end
+		end
+	end)
+    end)
+
     local Player = Window:NewTab("Toggles")
     local TogglesSection = Player:NewSection("Toggles")
 
 TogglesSection:NewToggle("AutoStomp", "Allows you to AutoStomp", function(v)
-    wait(0) local A_1 = "[Azure] Autostomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+    wait(0) local A_1 = "[Azure] AutoStomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
     getgenv().autostomp = v
         while true do
             if not getgenv().autostomp then return end
@@ -224,6 +237,34 @@ local script = Instance.new('LocalScript', Auto_Stomp)
             wait(0)
         end
     end)
+
+TogglesSection:NewToggle("AntiBag", "Disables the ability to get bagged", function(v)
+wait(0) local A_1 = "[Azure] AntiBag on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+        getgenv().name = v
+        while true do
+            if not getgenv().name then return end
+
+            wait(0)
+        end
+    end)
+
+TogglesSection:NewToggle("AntiFlashbang", "Disables the ability to get flashbanged", function(v)
+wait(0) local A_1 = "[Azure] AntiFlash on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+        getgenv().name = v
+        while true do
+            if not getgenv().name then return end
+while true do
+		local XD = game:GetService("Players").LocalPlayer.PlayerGui.MainScreenGui
+
+		if XD:FindFirstChild("whiteScreen") then
+			XD.whiteScreen:Destroy()
+		end
+		wait(0.1)
+	end
+            wait(0)
+        end
+    end)
+
 
 local Main = Window:NewTab("Extra")
     local ExtraSection = Main:NewSection("Extra")
