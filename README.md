@@ -200,19 +200,6 @@ Player = game:GetService'Players'.LocalPlayer;
 		end)
     end)
 
-MainSection:NewButton("Anti Bag", "Disables the ability to get bagged", function(v)
-wait(0) local A_1 = "[Azure] AntiBag Dnabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
-	local LocalPlayer = game:GetService("Players").LocalPlayer
-	local char = LocalPlayer.Character
-	char.ChildAdded:Connect(function(sock)
-		if sock:IsA("MeshPart") then do
-				wait(0)
-				sock:Destroy()
-			end
-		end
-	end)
-    end)
-
     local Player = Window:NewTab("Toggles")
     local TogglesSection = Player:NewSection("Toggles")
 
