@@ -1,7 +1,7 @@
 placeid = 2788229376
 if game.PlaceId == placeid then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Azure")
+    local Window = Library.CreateLib("Azure", "BloodTheme")
 
     -- Main
     local Main = Window:NewTab("Scripts")
@@ -157,7 +157,6 @@ _G.LoopUnban = false -- true or false
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DaHoodScripts/NoUScripts/main/NewUnban'))()
     end)
 
-
 MainSection:NewButton("Inf Jump", "Allows you to jump many times without stopping", function(v)
 wait(0) local A_1 = "[Azure] Inf jump enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 
@@ -252,7 +251,6 @@ while true do
         end
     end)
 
-
 local Main = Window:NewTab("Extra")
     local ExtraSection = Main:NewSection("Extra")
 
@@ -270,6 +268,11 @@ TeleportService = game:GetService("TeleportService")
 		wait()
 		TeleportService:Teleport(placeID_1, plr)
     end)
+    
+    ExtraSection:NewKeybind("Keybind", "Allows you to add a keybind to toggle gui", Enum.KeyCode.Z, function()
+	Library:ToggleUI()
+end)
+
 
 local Player = Window:NewTab("Teleports")
     local TeleportsSection = Player:NewSection("Teleports")
