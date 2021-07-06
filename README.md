@@ -275,7 +275,7 @@ local Main = Window:NewTab("Extra")
 
 	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop['[BrownBag] - $25'].Head.CFrame
-		wait(0)
+		wait(0.3)
 		fireclickdetector(game.Workspace.Ignored.Shop['[BrownBag] - $25'].ClickDetector)
 		game.Players.LocalPlayer.Backpack:WaitForChild("[BrownBag]").Parent = game.Players.LocalPlayer.Character
 
