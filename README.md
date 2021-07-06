@@ -1,14 +1,14 @@
 placeid = 2788229376
 if game.PlaceId == placeid then
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-    local Window = Library.CreateLib("Azure", "BloodTheme")
+    local Window = Library.CreateLib("[Doge Hub] Da hood", "BloodTheme")
 
     -- Main
     local Main = Window:NewTab("Scripts")
     local MainSection = Main:NewSection("Scripts")
 
     MainSection:NewButton("Fly", "Allows you to fly", function(v)
-wait(0) local A_1 = "[Azure] Fly enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] Fly enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 	local plr = game.Players.LocalPlayer
 	local mouse = plr:GetMouse()
 
@@ -121,7 +121,7 @@ wait(0) local A_1 = "[Azure] Fly enabled." local A_2 = "All" local Event = game:
     end)
 
 MainSection:NewButton("Reach", "Allows you to damage players from far away", function(v)
-wait(0) local A_1 = "[Azure] Reach Eabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] Reach Eabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
 	    	if v:isA("Tool") then
 	           local a = Instance.new("SelectionBox",v.Handle)
@@ -134,7 +134,7 @@ for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
     end)
 
 MainSection:NewButton("God", "Removes damage (dont use if your banned)", function(v)
-wait(0) local A_1 = "[Azure] God Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] God Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 local ps = game:GetService("Players")
 	local lp = ps.LocalPlayer
 	local char = lp.Character
@@ -153,13 +153,13 @@ local ps = game:GetService("Players")
 
 
 MainSection:NewButton("Unban", "Unbans yourself", function(v)
-wait(0) local A_1 = "[Azure] Unbanned." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] Unbanned." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 _G.LoopUnban = false -- true or false
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DaHoodScripts/NoUScripts/main/NewUnban'))()
     end)
 
 MainSection:NewButton("Inf Jump", "Allows you to jump many times without stopping", function(v)
-wait(0) local A_1 = "[Azure] Inf jump enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] Inf jump enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 
 Player = game:GetService'Players'.LocalPlayer;
 	UIS = game:GetService'UserInputService';
@@ -204,7 +204,7 @@ Player = game:GetService'Players'.LocalPlayer;
     local TogglesSection = Player:NewSection("Toggles")
 
 TogglesSection:NewToggle("AutoStomp", "Allows you to AutoStomp", function(v)
-    wait(0) local A_1 = "[Azure] AutoStomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+    wait(0) local A_1 = "[Doge Hub] AutoStomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
     getgenv().autostomp = v
         while true do
             if not getgenv().autostomp then return end
@@ -226,7 +226,7 @@ local script = Instance.new('LocalScript', Auto_Stomp)
     end)
 
 TogglesSection:NewToggle("AntiBag", "Disables the ability to get bagged", function(v)
-wait(0) local A_1 = "[Azure] AntiBag on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
             if not getgenv().name then return end
@@ -236,7 +236,7 @@ wait(0) local A_1 = "[Azure] AntiBag on/off." local A_2 = "All" local Event = ga
     end)
 
 TogglesSection:NewToggle("AntiFlashbang", "Disables the ability to get flashbanged", function(v)
-wait(0) local A_1 = "[Azure] AntiFlash on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] AntiFlash on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
             if not getgenv().name then return end
@@ -256,7 +256,7 @@ local Main = Window:NewTab("Extra")
     local ExtraSection = Main:NewSection("Extra")
 
 ExtraSection:NewButton("Tools while cuffed", "Allows you to use tools while cuffed", function(v)
-wait(0) local A_1 = "[Azure] Tools while cuffed." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+wait(0) local A_1 = "[Doge Hub] Tools while cuffed." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 LocalPlayer = game.Players.LocalPlayer
 
 LocalPlayer.Character.BodyEffects.Cuff.Value = false
@@ -306,6 +306,6 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-797.807
     -- Credits
     local Player = Window:NewTab("Credits")
     local CreditsSection = Player:NewSection("CrispyExploitz")
-    local CreditsSection = Player:NewSection("Crispy#3017")
+    local CreditsSection = Player:NewSection("ChoppaGoBrrrr#3017")
     local CreditsSection = Player:NewSection("https://discord.gg/FkadkNN5")
 end
