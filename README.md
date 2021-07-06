@@ -294,6 +294,15 @@ local Main = Window:NewTab("Extra")
 	end
 	end)
 
+	ExtraSection:NewTextBox("View", "Views a player", function(txt)
+		local TargetPlr = (txt)
+game.Workspace.Camera.CameraSubject = game.Players[TargetPlr].Character.Humanoid;
+	end)
+
+	ExtraSection:NewButton("UnView", "ButtonInfo", function()
+		game.Workspace.Camera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+	end)
+
 ExtraSection:NewButton("Tools while cuffed", "Allows you to use tools while cuffed", function(v)
 wait(0) local A_1 = "[Doge Hub] Tools while cuffed." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 LocalPlayer = game.Players.LocalPlayer
