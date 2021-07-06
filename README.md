@@ -203,10 +203,7 @@ Player = game:GetService'Players'.LocalPlayer;
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/racemodex/my-scripts/master/dahoodcrash", true))()
 	end)
 
-    local Player = Window:NewTab("Toggles")
-    local TogglesSection = Player:NewSection("Toggles")
-
-TogglesSection:NewToggle("AutoStomp", "Allows you to AutoStomp", function(v)
+	MainSection:NewToggle("AutoStomp", "Allows you to AutoStomp", function(v)
     wait(0) local A_1 = "[Doge Hub] AutoStomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
     getgenv().autostomp = v
         while true do
@@ -228,7 +225,7 @@ local script = Instance.new('LocalScript', Auto_Stomp)
         end
     end)
 
-TogglesSection:NewToggle("AntiBag", "Disables the ability to get bagged", function(v)
+	MainSection:NewToggle("AntiBag", "Disables the ability to get bagged", function(v)
 wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
@@ -238,7 +235,7 @@ wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event =
         end
     end)
 
-TogglesSection:NewToggle("AntiFlashbang", "Disables the ability to get flashbanged", function(v)
+	MainSection:NewToggle("AntiFlashbang", "Disables the ability to get flashbanged", function(v)
 wait(0) local A_1 = "[Doge Hub] AntiFlash on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
@@ -260,13 +257,40 @@ local Main = Window:NewTab("Extra")
 
 	ExtraSection:NewTextBox("Goto", "Teleports to a player", function(txt)
 		local TargetPlr = (txt)
-
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[TargetPlr].Character.HumanoidRootPart.CFrame
 	end)
 
 	ExtraSection:NewTextBox("Cash", "Tells you the amt of cash the player has", function(txt)
 		local TargetPlr = (txt)
 	local A_1 = "[Doge Hub] $" .. game.Players[TargetPlr].DataFolder.Currency.Value .. " " local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	end)
+
+	ExtraSection:NewTextBox("Bag", "Bag's the player", function(txt)
+		local TargetPlr = (txt)
+	function getRoot(char)
+		local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+		return rootPart
+	end
+
+	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop['[BrownBag] - $25'].Head.CFrame
+		wait(.30)
+		fireclickdetector(game.Workspace.Ignored.Shop['[BrownBag] - $25'].ClickDetector)
+		game.Players.LocalPlayer.Backpack:WaitForChild("[BrownBag]").Parent = game.Players.LocalPlayer.Character
+
+		local A_1 = "[Doge Hub] Bagging " .. TargetPlr .. "" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		wait(.5)
+		repeat
+			pcall(function()
+				wait()
+				getRoot(game.Players[TargetPlr].Character).CFrame = getRoot(game.Players.LocalPlayer.Character).CFrame + Vector3.new(1,3,0)
+				game.Players.LocalPlayer.Character["[BrownBag]"]:Activate()
+			end)
+		until game.Players[TargetPlr].Character:FindFirstChild("Christmas_Sock")
+		local A_1 = "[Doge Hub] Successfully Bagged " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		local A_1 = "[Doge Hub] " .. TargetPlr .. " Is Already Bagged." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+	end
 	end)
 
 ExtraSection:NewButton("Tools while cuffed", "Allows you to use tools while cuffed", function(v)
