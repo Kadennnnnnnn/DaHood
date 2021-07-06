@@ -128,6 +128,7 @@ for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
 	           a.Adornee = v.Handle
 	           v.Handle.Size = Vector3.new(50, 50, 50)
                    v.Handle.Transparency = 30
+		   v.Handle.CanCollide = false
 	        end
 		end
     end)
