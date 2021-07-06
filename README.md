@@ -287,9 +287,9 @@ local Main = Window:NewTab("Extra")
 				game.Players.LocalPlayer.Character["[BrownBag]"]:Activate()
 			end)
 		until game.Players[TargetPlr].Character:FindFirstChild("Christmas_Sock")
-		local A_1 = "[Doge Hub] Successfully Bagged " .. TargetPlr .. "." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		local A_1 = "[Doge Hub] Successfully Bagged " .. TargetPlr .. "" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
-		local A_1 = "[Doge Hub] " .. TargetPlr .. " Is Already Bagged." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		local A_1 = "[Doge Hub] " .. TargetPlr .. " Is Already Bagged" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 	end
 	end)
 
