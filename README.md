@@ -274,11 +274,11 @@ local Main = Window:NewTab("Extra")
 
 	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Ignored.Shop['[BrownBag] - $25'].Head.CFrame
-		wait(.30)
+		wait(0)
 		fireclickdetector(game.Workspace.Ignored.Shop['[BrownBag] - $25'].ClickDetector)
 		game.Players.LocalPlayer.Backpack:WaitForChild("[BrownBag]").Parent = game.Players.LocalPlayer.Character
 
-		local A_1 = "[Doge Hub] Bagging " .. TargetPlr .. "" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		local A_1 = "[Doge Hub] Bagging the player" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 		wait(.5)
 		repeat
 			pcall(function()
@@ -287,9 +287,9 @@ local Main = Window:NewTab("Extra")
 				game.Players.LocalPlayer.Character["[BrownBag]"]:Activate()
 			end)
 		until game.Players[TargetPlr].Character:FindFirstChild("Christmas_Sock")
-		local A_1 = "[Doge Hub] Successfully Bagged " .. TargetPlr .. "" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		local A_1 = "[Doge Hub] The player has been bagged" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
-		local A_1 = "[Doge Hub] " .. TargetPlr .. " Is Already Bagged" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		local A_1 = "[Doge Hub] The player is already bagged" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
 	end
 	end)
 
