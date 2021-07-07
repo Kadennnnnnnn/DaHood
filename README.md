@@ -135,7 +135,20 @@ for i,v in pairs(game:GetService'Players'.LocalPlayer.Character:GetChildren())do
 
 MainSection:NewButton("God", "Removes damage (dont use if your banned)", function(v)
 wait(0) local A_1 = "[Doge Hub] God Enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
-loadstring(game:HttpGet("https://pastebin.com/raw/4zHpyqHz", true))()
+local ps = game:GetService("Players")
+	local lp = ps.LocalPlayer
+	local char = lp.Character
+
+	char.BodyEffects.Armor:Destroy()
+	char.BodyEffects.Defense:Destroy()
+
+	local Clone1 = Instance.new("IntValue")
+	Clone1.Name = "Armor"
+	Clone1.Parent = char.BodyEffects
+
+	local Clone2 = Instance.new("NumberValue")
+	Clone2.Name = "Defense"
+	Clone2.Parent = char.BodyEffects
     end)
 
 
