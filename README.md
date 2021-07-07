@@ -325,30 +325,25 @@ end)
 local Player = Window:NewTab("Teleports")
     local TeleportsSection = Player:NewSection("Teleports")
 
-TeleportsSection:NewButton("All guns", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-871.855896, -32.7306442, -535.05896, -0.995392859, -4.0865018e-08, 0.0958791748, -4.15632648e-08, 1, -5.28550803e-09, -0.0958791748, -9.24621002e-09, -0.995392859)
-    end)
+	TeleportsSection:NewButton("Bank", "ButtonInfo", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-405.418579, 21.0827885, -289.47937, -0.0112653067, -2.35088859e-09, -0.999936521, -1.48162576e-08, 1, -2.18411755e-09, 0.999936521, 1.47907127e-08, -0.0112653067)
+	end)
 
-TeleportsSection:NewButton("Gun shop 1", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.286072, 7.99984741, -737.080627, -0.062280681, 0, 0.998058677, 0, 1, 0, -0.998058677, 0, -0.062280681)
-    end)
+	TeleportsSection:NewButton("Gun shop 1", "ButtonInfo", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.286072, 7.33263588, -737.080627, -0.062280681, 0, 0.998058677, 0, 1, 0, -0.998058677, 0, -0.062280681)
+	end)
 
-TeleportsSection:NewButton("Gun shop 2", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.144287, 48.0050011, -606.490051, 0.997044683, 4.43454518e-08, -0.0768238455, -4.82029563e-08, 1, -4.83580465e-08, 0.0768238455, 5.1918267e-08, 0.997044683)
-    end)
+	TeleportsSection:NewButton("Gun shop 2", "ButtonInfo", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.522583, 47.3377914, -601.02533, 0.9994331, 4.65478287e-08, -0.0336611904, -4.82029563e-08, 1, -4.83580465e-08, 0.0336611904, 4.99532113e-08, 0.9994331)
+	end)
 
-TeleportsSection:NewButton("Bank", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-407.866272, 21.75, -281.132416, 0.0552855767, 5.23181782e-08, 0.998470604, 6.93292961e-08, 1, -5.62370985e-08, -0.998470604, 7.23323623e-08, 0.0552855767)
-    end)
+	TeleportsSection:NewButton("School", "ButtonInfo", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-653.469116, 21.0827637, 256.18573, -0.997267783, 2.51788137e-08, -0.0738710985, 2.64405298e-08, 1, -1.6102037e-08, 0.0738710985, -1.80112334e-08, -0.997267783)
+	end)
 
-TeleportsSection:NewButton("Casino", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-827.856201, 21.2549973, -180.739929, -0.998989165, 1.3394204e-08, -0.0449521728, 1.2559739e-08, 1, 1.88458227e-08, 0.0449521728, 1.82621847e-08, -0.998989165)
-    end)
-
-TeleportsSection:NewButton("Admin base", "Teleports you to the location", function(v)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-797.8078, -39.6492004, -899.534851, -0.999981701, -4.12056389e-09, 0.00603817962, -4.31152092e-09, 1, -3.16118118e-08, -0.00603817962, -3.1637267e-08, -0.999981701)
-    end)
-
+	TeleportsSection:NewButton("Admin base", "ButtonInfo", function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-627.762085, -40.3214188, -885.938049, 0.0233838242, -1.52415982e-08, 0.999726534, 2.06791633e-08, 1, 1.47620751e-08, -0.999726534, 2.03283115e-08, 0.0233838242)
+	end)
 
     -- Credits
     local Player = Window:NewTab("Credits")
