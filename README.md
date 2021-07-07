@@ -200,9 +200,9 @@ Player = game:GetService'Players'.LocalPlayer;
 		end)
     end)
 
-	MainSection:NewButton("AutoFarm", "Allows you to AutoFarm", function()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Kadennnnnnnn/Autofarm/main/README.md", true))()
-	end)
+	MainSection:NewButton("Auto drop", "Auto drops cash", function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
+end)
 
 	MainSection:NewButton("Crash server", "Crashes the server", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/racemodex/my-scripts/master/dahoodcrash", true))()
@@ -235,15 +235,7 @@ wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event =
         getgenv().name = v
         while true do
             if not getgenv().name then return end
-			local LocalPlayer = game:GetService("Players").LocalPlayer
-			local char = LocalPlayer.Character
-			char.ChildAdded:Connect(function(sock)
-				if sock:IsA("MeshPart") then do
-						wait(0)
-						sock:Destroy()
-					end
-				end
-			end)
+
             wait(0)
         end
     end)
@@ -271,6 +263,39 @@ local Main = Window:NewTab("Extra")
 	ExtraSection:NewTextBox("Goto", "Teleports to a player", function(txt)
 		local TargetPlr = (txt)
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[TargetPlr].Character.HumanoidRootPart.CFrame
+	end)
+
+	ExtraSection:NewTextBox("Target", "Targets a player", function(txt)
+		local TargetPlr = (txt)
+game.Workspace.Camera.CameraSubject = game.Players[TargetPlr].Character.Humanoid;
+
+local localPlayer     = game:GetService("Players").LocalPlayer;
+	local localCharacter  = localPlayer.Character;
+	local TargetPlr       = (txt)
+
+
+	if TargetPlr and game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == false then
+		pcall(function()
+
+			game.Players.LocalPlayer.Character.LeftHand.Size = Vector3.new(4,4,4)
+			localCharacter.LeftHand.LeftWrist:Destroy();
+			localCharacter.RightHand.RightWrist:Destroy();
+			game.Players.LocalPlayer.Character.RightHand.Size = Vector3.new(4,4,4)
+
+		end);
+		repeat
+			wait();
+			localCharacter.LeftHand.CFrame = game.Players[TargetPlr].Character.LowerTorso.CFrame;
+			localCharacter.RightHand.CFrame = game.Players[TargetPlr].Character.LowerTorso.CFrame;
+		until game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == true
+		wait(0) local A_1 = "[Doge H] " .. TargetPlr .. " Has Been Successfully Eliminated!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2)
+		game.StarterGui:SetCore("SendNotification", {
+			Title = "[Doge Hub]";
+			Text = "Target has been knocked";
+			Duration = 15;
+		})
+	elseif game.Players[TargetPlr].Character.BodyEffects['K.O'].Value == true then
+	end;
 	end)
 
 	ExtraSection:NewTextBox("Cash", "Tells you the amt of cash the player has", function(txt)
@@ -338,25 +363,30 @@ end)
 local Player = Window:NewTab("Teleports")
     local TeleportsSection = Player:NewSection("Teleports")
 
-	TeleportsSection:NewButton("Bank", "ButtonInfo", function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-405.418579, 21.0827885, -289.47937, -0.0112653067, -2.35088859e-09, -0.999936521, -1.48162576e-08, 1, -2.18411755e-09, 0.999936521, 1.47907127e-08, -0.0112653067)
-	end)
+TeleportsSection:NewButton("All guns", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-871.855896, -32.7306442, -535.05896, -0.995392859, -4.0865018e-08, 0.0958791748, -4.15632648e-08, 1, -5.28550803e-09, -0.0958791748, -9.24621002e-09, -0.995392859)
+    end)
 
-	TeleportsSection:NewButton("Gun shop 1", "ButtonInfo", function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.286072, 7.33263588, -737.080627, -0.062280681, 0, 0.998058677, 0, 1, 0, -0.998058677, 0, -0.062280681)
-	end)
+TeleportsSection:NewButton("Gun shop 1", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-564.286072, 7.99984741, -737.080627, -0.062280681, 0, 0.998058677, 0, 1, 0, -0.998058677, 0, -0.062280681)
+    end)
 
-	TeleportsSection:NewButton("Gun shop 2", "ButtonInfo", function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.522583, 47.3377914, -601.02533, 0.9994331, 4.65478287e-08, -0.0336611904, -4.82029563e-08, 1, -4.83580465e-08, 0.0336611904, 4.99532113e-08, 0.9994331)
-	end)
+TeleportsSection:NewButton("Gun shop 2", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(481.144287, 48.0050011, -606.490051, 0.997044683, 4.43454518e-08, -0.0768238455, -4.82029563e-08, 1, -4.83580465e-08, 0.0768238455, 5.1918267e-08, 0.997044683)
+    end)
 
-	TeleportsSection:NewButton("School", "ButtonInfo", function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-653.469116, 21.0827637, 256.18573, -0.997267783, 2.51788137e-08, -0.0738710985, 2.64405298e-08, 1, -1.6102037e-08, 0.0738710985, -1.80112334e-08, -0.997267783)
-	end)
+TeleportsSection:NewButton("Bank", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-407.866272, 21.75, -281.132416, 0.0552855767, 5.23181782e-08, 0.998470604, 6.93292961e-08, 1, -5.62370985e-08, -0.998470604, 7.23323623e-08, 0.0552855767)
+    end)
 
-	TeleportsSection:NewButton("Admin base", "ButtonInfo", function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-627.762085, -40.3214188, -885.938049, 0.0233838242, -1.52415982e-08, 0.999726534, 2.06791633e-08, 1, 1.47620751e-08, -0.999726534, 2.03283115e-08, 0.0233838242)
-	end)
+TeleportsSection:NewButton("Casino", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-827.856201, 21.2549973, -180.739929, -0.998989165, 1.3394204e-08, -0.0449521728, 1.2559739e-08, 1, 1.88458227e-08, 0.0449521728, 1.82621847e-08, -0.998989165)
+    end)
+
+TeleportsSection:NewButton("Admin base", "Teleports you to the location", function(v)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-797.8078, -39.6492004, -899.534851, -0.999981701, -4.12056389e-09, 0.00603817962, -4.31152092e-09, 1, -3.16118118e-08, -0.00603817962, -3.1637267e-08, -0.999981701)
+    end)
+
 
     -- Credits
     local Player = Window:NewTab("Credits")
