@@ -231,7 +231,15 @@ wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event =
         getgenv().name = v
         while true do
             if not getgenv().name then return end
-
+			local LocalPlayer = game:GetService("Players").LocalPlayer
+			local char = LocalPlayer.Character
+			char.ChildAdded:Connect(function(sock)
+				if sock:IsA("MeshPart") then do
+						wait(0)
+						sock:Destroy()
+					end
+				end
+			end)
             wait(0)
         end
     end)
