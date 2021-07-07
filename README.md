@@ -167,6 +167,10 @@ Player = game:GetService'Players'.LocalPlayer;
 	   		 end
 		end)
 
+		MainSection:NewButton("ButtonText", "ButtonInfo", function()
+			https://raw.githubusercontent.com/Kadennnnnnnn/Autofarm/main/README.md
+		end)
+
 Player = game:GetService'Players'.LocalPlayer;
 	UIS = game:GetService'UserInputService';
 	
