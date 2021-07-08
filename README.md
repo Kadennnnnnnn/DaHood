@@ -158,7 +158,7 @@ _G.LoopUnban = false -- true or false
 loadstring(game:HttpGet('https://raw.githubusercontent.com/DaHoodScripts/NoUScripts/main/NewUnban'))()
     end)
 
-MainSection:NewButton("Inf Jump", "Allows you to jump many times without stopping", function(v)
+MainSection:NewButton("Inf jump", "Allows you to jump many times without stopping", function(v)
 wait(0) local A_1 = "[Doge Hub] Inf jump enabled." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
 
 Player = game:GetService'Players'.LocalPlayer;
