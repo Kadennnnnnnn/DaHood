@@ -204,7 +204,7 @@ Player = game:GetService'Players'.LocalPlayer;
 		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Raycodex/Exploiting/main/Roblox/Da%20Hood%20Auto%20Cash%20Drop"), true))()
 end)
 
-	MainSection:NewButton("Auto farm", "Crashes the server", function()
+	MainSection:NewButton("Auto farm", "Allows you to autofarming", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Kadennnnnnnn/Autofarm/main/README.md", true))()
 	end)
 
