@@ -212,7 +212,7 @@ end)
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/racemodex/my-scripts/master/dahoodcrash", true))()
 	end)
 
-	MainSection:NewToggle("AutoStomp", "Allows you to AutoStomp", function(v)
+	MainSection:NewToggle("Auto stomp", "Allows you to AutoStomp", function(v)
     wait(0) local A_1 = "[Doge Hub] AutoStomp on/off" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
     getgenv().autostomp = v
         while true do
@@ -234,7 +234,7 @@ local script = Instance.new('LocalScript', Auto_Stomp)
         end
     end)
 
-	MainSection:NewToggle("AntiBag", "Disables the ability to get bagged", function(v)
+	MainSection:NewToggle("Anti bag", "Disables the ability to get bagged", function(v)
 wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
@@ -244,7 +244,7 @@ wait(0) local A_1 = "[Doge Hub] AntiBag on/off." local A_2 = "All" local Event =
         end
     end)
 
-	MainSection:NewToggle("AntiFlashbang", "Disables the ability to get flashbanged", function(v)
+	MainSection:NewToggle("Anti flashbang", "Disables the ability to get flashbanged", function(v)
 wait(0) local A_1 = "[Doge Hub] AntiFlash on/off." local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
         getgenv().name = v
         while true do
